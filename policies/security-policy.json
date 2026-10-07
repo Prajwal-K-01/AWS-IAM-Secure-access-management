@@ -1,0 +1,38 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SecurityMonitoringReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:DescribeTrails",
+        "cloudtrail:GetTrailStatus",
+        "cloudtrail:LookupEvents",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:ListMetrics",
+        "iam:GetAccountSummary",
+        "iam:GetAccountPasswordPolicy",
+        "iam:ListUsers",
+        "iam:ListGroups",
+        "iam:ListRoles",
+        "iam:ListPolicies",
+        "iam:GetUser",
+        "iam:GetRole",
+        "iam:GetPolicy"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SecurityFindingsReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "guardduty:GetDetector",
+        "guardduty:GetFindings",
+        "guardduty:ListDetectors",
+        "guardduty:ListFindings"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
